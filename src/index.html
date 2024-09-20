@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Techno Store S.A</title>
+</head>
+<body >
+
+  <nav class="bg-neutral-100">
+    <div class="py-4 space-between">
+      <span>technostoresa@hotmail.com</span>
+
+    </div>
+    
+    <div class="bg-stone-400 p-6 grid grid-cols-12 gap-4 ">
+
+      <!-- Column -->
+      <div class="mx-auto col-span-12 md:col-span-3 self-center text-white font-bold"><a href="">TechnoStore</a></div>
+  
+      <!-- Column -->
+      <div class="col-span-12 md:col-span-6"><input class="w-full p-2 rounded-full" type="text" placeholder="Buscar"></div>
+  
+      <!-- Column -->
+      <div class="mx-auto col-span-12 md:col-span-3 self-center flex gap-10">
+        <a class="self-center" href=""><img src="../imgs/icons/shop-car.png" alt=""></a>
+        <a class="px-3 py-2 font-semibold text-white bg-slate-700 rounded-full hover:bg-neutral-100 hover:text-black" href="#">Registrarse</a>
+        <a class="px-3 py-2 bg-white rounded-full" href="#">Iniciar Sesion</a>
+      </div>
+  
+  </div>
+
+   
+    <div class="mb-10 flex flex-col sm:flex-row py-4 justify-evenly gap-10 shadow-md">
+        <a class="font-semibold text-center hover:text-stone-400" href="#">OFERTAS</a>
+        <a class="font-semibold text-center hover:text-stone-400" href="#">PC ARMADA</a>
+        <a class="font-semibold text-center hover:text-stone-400" href="#">SERVICIOS</a>
+        <a class="font-semibold text-center hover:text-stone-400" href="#">SOBRE NOSOTROS</a>
+        <a class="font-semibold text-center hover:text-stone-400" href="#">CONTACTO</a>
+    </div>
+
+  </nav>
+
+ <!-- HERO BACKGROUND  -->
+  <div
+  id="carouselExampleIndicators"
+  class="relative"
+  data-twe-carousel-init
+  data-twe-ride="carousel">
+  <!--Carousel indicators-->
+  <div
+    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-twe-carousel-indicators>
+    <button
+      type="button"
+      data-twe-target="#carouselExampleIndicators"
+      data-twe-slide-to="0"
+      data-twe-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-twe-target="#carouselExampleIndicators"
+      data-twe-slide-to="1"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-twe-target="#carouselExampleIndicators"
+      data-twe-slide-to="2"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 3"></button>
+  </div>
+
+  <!--Carousel items-->
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!--First item-->
+    <div
+      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item
+      data-twe-carousel-active>
+      <div>
+        <a href="#">
+          <img
+        src="../imgs/banner1.png"
+        class="block w-full"
+        alt="Wild Landscape" />
+        </a>
+        
+      </div>
+      
+    </div>
+    <!--Second item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <div>
+        <a href="#">
+          <img
+        src="../imgs/banner2.webp"
+        class="block w-full"
+        alt="Wild Landscape" />
+        </a>
+        
+      </div>
+    </div>
+    <!--Third item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <div>
+        <a href="#">
+          <img
+        src="../imgs/banner3.jpg"
+        class="block w-full"
+        alt="Wild Landscape" />
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--Carousel controls - prev item-->
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[5%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-twe-target="#carouselExampleIndicators"
+    data-twe-slide="prev">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+  <!--Carousel controls - next item-->
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[5%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-twe-target="#carouselExampleIndicators"
+    data-twe-slide="next">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button>
+</div>
+
+<main>
+  <div class="container mx-auto">
+    <div class="m-10">
+      <div class="my-6">
+        <h2 class="text-2xl font-semibold">Categorias</h2>
+      </div>
+      <!-- ITEMS-->
+       <!-- ITEM 1-->
+      <div class="grid grid-cols-5 px-5 gap-10  my-[50px]">
+        <div class="bg-white shadow-lg p-6 rounded-lg">
+          <a href="#">
+            <div><img class="w-[234px] mx-auto" src="../imgs/Macbook.webp" alt=""></div>
+            <div class="text-center"><span class="font-semibold text-lg">Laptops</span></div>
+          </a>
+        </div>
+        <!-- ITEM 2-->
+        <div class="bg-white shadow-lg p-6 rounded-lg">
+          <a  href="#">
+            <div><img class="w-[234px] mx-auto " src="../imgs/Perifericos.webp" alt=""></div>
+            <div class="text-center"><span class="font-semibold text-lg">Perifericos</span></div>
+          </a>
+        </div>
+       <!-- ITEM 3-->
+        <div class="bg-white shadow-lg p-6 rounded-lg">
+          <a href="#">
+            <div><img class="w-[234px] mx-auto" src="../imgs/Macbook.webp" alt=""></div>
+            <div class="text-center"><span class="font-semibold text-lg">Laptops</span></div>
+          </a>
+        </div>
+      <!-- ITEM 4-->
+        <div class="bg-white shadow-lg p-6 rounded-lg">
+          <a href="#">
+            <div><img class="w-[234px] mx-auto" src="../imgs/Macbook.webp" alt=""></div>
+            <div class="text-center"><span class="font-semibold text-lg">Laptops</span></div>
+          </a>
+        </div>
+
+      <!-- ITEM 5-->
+
+        <div class="bg-white shadow-lg p-6 rounded-lg">
+          <a href="#">
+            <div><img class="w-[234px] mx-auto" src="../imgs/Macbook.webp" alt=""></div>
+            <div class="text-center"><span class="font-semibold text-lg">Laptops</span></div>
+          </a>
+        </div>
+        <!--ITEMS-->
+      </div>
+    </div>
+
+    <div class="banners container mx-auto flex justify-center gap-40 my-20">
+        <a href=""><img class="w-[600px] h-[400px]" src="../imgs/hbg1.webp" alt=""></a>
+        <a href=""><img class="w-[600px] h-[400px]" src="../imgs/hbg1.webp" alt=""></a>
+    </div>
+
+
+
+
+  </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+</html> 

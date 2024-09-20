@@ -1,2 +1,2 @@
-let actualIndex = 0;
-
+import { Input, initTWE } from "tw-elements";
+initTWE({ Input }, { allowReinits: true });
