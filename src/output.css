@@ -657,6 +657,11 @@ video {
   margin-right: auto;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-6{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -665,11 +670,6 @@ video {
 .my-\[50px\]{
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .-mr-\[100\%\]{
@@ -830,10 +830,6 @@ video {
 
 .rounded-lg{
   border-radius: 0.5rem;
-}
-
-.rounded-sm{
-  border-radius: 0.125rem;
 }
 
 .\!border-0{
