@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión - TechnoStore</title>
+    <script src="https://cdn.tailwindcss.com?3.4.12"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden md:max-w-2xl mb-8">
+            <div class="md:flex">
+                <div class="p-8 w-full">
+                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-1">TechnoStore</div>
+                    <h2 class="block mt-1 text-lg leading-tight font-medium text-black mb-4">Registro de Usuario</h2>
+                    <form id="registroForm">
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="correo" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
+                            <input type="email" id="correo" name="correo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="numero" class="block text-gray-700 text-sm font-bold mb-2">Número de Teléfono</label>
+                            <input type="tel" id="numero" name="numero" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="direccion" class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+                            <textarea id="direccion" name="direccion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+                            <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+                <div class="p-8 w-full">
+                    <h2 class="block mt-1 text-lg leading-tight font-medium text-black mb-4">Iniciar Sesión</h2>
+                    <form id="loginForm">
+                        <div class="mb-4">
+                            <label for="login-correo" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
+                            <input type="email" id="login-correo" name="correo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="login-password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+                            <input type="password" id="login-password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Iniciar Sesión
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up para mostrar mensajes -->
+    <div id="popup" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900" id="popupTitle"></h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500" id="popupMessage"></p>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="closePopup" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el pop-up
+        function showPopup(title, message) {
+            document.getElementById('popupTitle').textContent = title;
+            document.getElementById('popupMessage').textContent = message;
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        // Cerrar el pop-up
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('popup').classList.add('hidden');
+        });
+
+        // Manejar el registro de usuario
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const userData = Object.fromEntries(formData.entries());
+            
+            // Simular el almacenamiento de usuarios 
+            let users = JSON.parse(localStorage.getItem('users') || '[]');
+            if (users.some(user => user.correo === userData.correo)) {
+                showPopup('Error', 'Este correo ya está registrado.');
+                return;
+            }
+            users.push(userData);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            showPopup('Registro Exitoso', 'Usuario registrado correctamente.');
+            this.reset();
+        });
+
+        // Manejar el inicio de sesión
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const loginData = Object.fromEntries(formData.entries());
+            
+            // Simular la verificación de credenciales (¡NO SEGURO para producción!)
+            let users = JSON.parse(localStorage.getItem('users') || '[]');
+            const user = users.find(u => u.correo === loginData.correo && u.password === loginData.password);
+            
+            if (user) {
+                showPopup('Inicio de Sesión Exitoso', `Bienvenido, ${user.nombre}!`);
+                // Aquí podrías redirigir al usuario a su página de perfil o dashboard
+            } else {
+                showPopup('Error', 'Credenciales inválidas.');
+            }
+            this.reset();
+        });
+    </script>
+</body>
+</html>

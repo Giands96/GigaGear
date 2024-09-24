@@ -18,7 +18,7 @@
           <div class="bg-stone-400 p-4 flex flex-col md:flex-row items-center justify-evenly">
             <!-- Logo -->
             <div class="w-full md:w-auto mb-4 md:mb-0 text-center md:text-left">
-              <a href="" class="text-white font-bold text-xl">TechnoStore</a>
+                <a href="index.html" class="text-white font-bold text-xl"><img class="w-[240px] self-center" src="../imgs/logo.png" alt=""></a>
             </div>
           
             <!-- Barra de búsqueda -->
@@ -106,7 +106,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Columna de imagen/banner -->
             <div class="md:col-span-1">
-                <img src="../imgs/banner-vertical.jpg" alt="Banner" class="w-full rounded-lg shadow-md">
+                <img src="../imgs/vertical-banner.jpg" alt="Banner" class="w-full rounded-lg shadow-md">
             </div>
 
             <!-- Columna principal de contenido -->
@@ -126,11 +126,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Tarjeta de producto 1 -->
                     <div class="bg-white rounded-lg shadow-md p-4">
-                        <img src="../imgs/producto1.jpg" alt="Producto 1" class="w-full mb-4 rounded">
-                        <h3 class="font-semibold mb-2">VIDEO MSI GEFORCE NVIDIA N210 1GB DDR3</h3>
-                        <p class="text-orange-500 font-bold mb-2">$ 30,80</p>
-                        <p class="text-gray-500 mb-4">(S/ 117,96)</p>
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">COMPRAR</button>
+                        <img src="../imgs/rtx-4060-ti-gigabyte.jpg" alt="Producto 1" class="w-full mb-4 rounded">
+                        <h3 class="font-semibold mb-2">GEFORCE GIGABYTE NVIDIA RTX 4060 Ti 8GB GDDR6</h3>
+                        <p class="text-orange-500 font-bold mb-2">$ 530,80</p>
+                        <p class="text-gray-500 mb-4">(S/ 2117,96)</p>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600 w-full">COMPRAR</button>
                     </div>
 
                     <!-- Tarjeta de producto 2 -->
@@ -150,12 +150,29 @@
                         <p class="text-gray-500 mb-4">(S/ 1.784,40)</p>
                         <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">COMPRAR</button>
                     </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="../imgs/producto3.jpg" alt="Producto 3" class="w-full mb-4 rounded">
+                        <h3 class="font-semibold mb-2">VGA MSI GEFORCE NVIDIA RTX 4060 Ti VENTUS 3X 8GB GDDR6</h3>
+                        <p class="text-orange-500 font-bold mb-2">$ 465,90</p>
+                        <p class="text-gray-500 mb-4">(S/ 1.784,40)</p>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">COMPRAR</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <img src="../imgs/producto3.jpg" alt="Producto 3" class="w-full mb-4 rounded">
+                        <h3 class="font-semibold mb-2">VGA MSI GEFORCE NVIDIA RTX 4060 Ti VENTUS 3X 8GB GDDR6</h3>
+                        <p class="text-orange-500 font-bold mb-2">$ 465,90</p>
+                        <p class="text-gray-500 mb-4">(S/ 1.784,40)</p>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">COMPRAR</button>
+                    </div>
+
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-100 py-12">
+    <footer class="bg-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
@@ -170,7 +187,7 @@
                         <li class="mb-2"><a href="#" class="hover:text-stone-400">OFERTAS</a></li>
                         <li class="mb-2"><a href="#" class="hover:text-stone-400">SERVICIOS</a></li>
                         <li class="mb-2"><a href="#" class="hover:text-stone-400">CONTACTO</a></li>
-                        <li class="mb-2"><a href="politica-privacidad.html" class="hover:text-stone-400">Política de Privacidad</a></li>
+                        <li class="mb-2"><a href="politics.html" class="hover:text-stone-400">Política de Privacidad</a></li>
                     </ul>
                 </div>
                 <div>
@@ -202,5 +219,43 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const dropdownButton = document.getElementById('dropdownButton');
+       const dropdownItems = document.getElementById('dropdownItems');
+       const dropdownActive = document.getElementById('dropdown-active');
+       const dropdownSubItems = document.getElementById('dropdownSubItems');
+
+
+       // Mantener el dropDown
+       dropdownButton.addEventListener('click', () => {
+           dropdownItems.classList.toggle('hidden');
+
+       });
+
+       // Mantener subdropdown
+       dropdownActive.addEventListener('mouseenter', () => {
+           dropdownSubItems.classList.remove('hidden');
+       });
+
+       dropdownItems.addEventListener('mouseleave', () => {
+           dropdownSubItems.classList.add('hidden');
+           dropdownItems.classList.add('hidden');
+       });
+
+       dropdownSubItems.addEventListener('mouseleave', () =>{
+         dropdownSubItems.classList.add('hidden')
+       })
+
+       // Cerrar dropdown cuando se haga click fuera
+       document.addEventListener('click', (event) => {
+           if (!dropdownButton.contains(event.target) && !dropdownItems.contains(event.target)) {
+               dropdownItems.classList.add('hidden');
+               dropdownSubItems.classList.add('hidden');
+           }
+       });
+
+       
+</script>
 </body>
 </html>
