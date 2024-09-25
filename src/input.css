@@ -4,24 +4,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
-
-.slide-down {
-    animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
