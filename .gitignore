@@ -1,1 +1,4 @@
 /node_modules
+
+echo "imgs/CloneHero-win64.exe" >> .gitignore
+echo "imgs/Proyecto del curso.pdf" >> .gitignore
