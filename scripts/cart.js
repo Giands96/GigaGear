@@ -3,7 +3,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || {};
 
 // Funciones globales
 window.displayCart = function() {
-    window.location.href = 'confirmar-pago.html';
+    window.location.href = '/src/productos/confirmar-pago.html';
 };
 
 window.displayCartSummary = function() {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartUI();
 
     // Si estamos en la página de confirmación de pago, mostramos el resumen del carrito
-    if (window.location.pathname.includes('confirmar-pago.html')) {
+    if (window.location.pathname.includes('/src/productos/confirmar-pago.html')) {
         displayCartSummary();
     }
 });
