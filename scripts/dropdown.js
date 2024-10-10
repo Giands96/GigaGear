@@ -6,6 +6,7 @@ const dropdownSubItems = document.getElementById('dropdownSubItems');
 const dropdownGpu = document.getElementById('dropdown-gpu');
 const dropdownMonitor = document.getElementById('dropdown-active-monitors');
 const dropdownSubItemMonitors = document.getElementById('dropdownSubItemsMonitors');
+const dropdownLaptops = document.getElementById('dropdown-laptops');
 
 // Mantener el dropDown
 dropdownButton.addEventListener('click', () => {
@@ -44,6 +45,11 @@ dropdownSubItemMonitors.addEventListener('mouseleave',()=>{
     dropdownSubItems.classList.add('hidden')
 })
 
+dropdownLaptops.addEventListener('mouseenter',()=>{
+    dropdownSubItems.classList.add('hidden');
+    dropdownSubItemsMonitors.classList.add('hidden');
+})
+
 
 
 // Cerrar dropdown cuando se haga click fuera
@@ -53,5 +59,7 @@ document.addEventListener('click', (event) => {
         dropdownSubItems.classList.add('hidden');
     }
 });
+
+
   });
 
