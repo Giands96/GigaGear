@@ -1,15 +1,25 @@
 // Variables globales
 let cart = JSON.parse(localStorage.getItem('cart')) || {};
+const confirm = document.getElementById('confirm-payment');
+
+function paymentSuccess() {
+    confirm.addEventListener('click', () => {
+      window.location.href = '../src/pago-confirmado.html';
+    });
+  }
+
+
 
 // Funciones globales
 window.displayCart = function() {
     window.location.href = '/src/productos/confirmar-pago.html';
-};
+  };
 
 window.displayCartSummary = function() {
     const cartSummary = document.getElementById('cart-summary');
     const orderTotal = document.getElementById('order-total');
     if (!cartSummary || !orderTotal) return;
+    
 
     let subtotal = 0;
     let cartContent = '';
@@ -106,6 +116,9 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+
+
+
 // Evento DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     const confirmAdd = document.getElementById('confirmAdd');
@@ -142,7 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartUI();
 
     // Si estamos en la página de confirmación de pago, mostramos el resumen del carrito
-    if (window.location.pathname.includes('/src/productos/confirmar-pago.html')) {
+    if (window.location.pathname.includes('/src/pago-confirmado.html')) {
         displayCartSummary();
     }
+
+
 });
+
+
